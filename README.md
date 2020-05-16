@@ -1,1 +1,3 @@
 # django-recipes
+
+Learning Django.
