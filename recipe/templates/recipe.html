@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+
+{% include 'partials/menu.html' %}
+
 <!-- ##### Breadcumb Area Start ##### -->
 <div class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/tomate_banner.jpg);">
     <div class="container h-100">
@@ -97,4 +100,6 @@
     </div>
 </div>
 <!-- Ingredientes -->
+
+{% include 'partials/footer.html' %}
 {% endblock %}
