@@ -10,7 +10,7 @@
         <div class="row h-100 align-items-center">
             <div class="col-12">
                 <div class="breadcumb-text text-center">
-                    <h2>Receita</h2>
+                    <h2>Recipe</h2>
                 </div>
             </div>
         </div>
@@ -27,13 +27,13 @@
                 <div class="row">
                     <div class="col-12 col-lg-5">
                         <select name="select1" id="select1">
-                            <option value="1">Comida típica brasileira</option>
-                            <option value="1">Massas</option>
-                            <option value="1">Veganas</option>
+                            <option value="1">Dessert</option>
+                            <option value="1">Pasta</option>
+                            <option value="1">Vegeterian</option>
                         </select>
                     </div>
                     <div class="col-12 col-lg-2 text-right">
-                        <button type="submit" class="btn delicious-btn">Buscar</button>
+                        <button type="submit" class="btn delicious-btn">Find</button>
                     </div>
                 </div>
             </form>
@@ -63,7 +63,7 @@
                         <div class="receipe-duration">
                             <h6>Prepare time: {{ recipe.prepare_time }} minutes</h6>
                             <h6>Serve: {{ recipe.serves }}</h6>
-                            <h6>Categoria: {{ recipe.category }}</h6>
+                            <h6>Category: {{ recipe.category }}</h6>
                         </div>
                     </div>
                 </div>
