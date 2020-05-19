@@ -1,17 +1,17 @@
-from django.shortcuts import render
-# Create your views here.
+from django.shortcuts import render, get_object_or_404
+from .models import Recipe
 
 def index(request):
-    recipe_list = [
-        {'recipe_name':'Recipe 01'},
-        {'recipe_name':'Recipe 02'},
-        {'recipe_name':'Recipe 03'},
-    ]
+    recipe_list = Recipe.objects.all()
     data = {
-        'best_recipe': recipe_list
+        'recipe_list': recipe_list
     }
     return render(request, 'index.html', data)
 
 
-def recipe(request):
-    return render(request, 'recipe.html')
+def recipe(request, recipe_id):
+    recipe = get_object_or_404(Recipe, pk=recipe_id)
+    data = {
+        'recipe': recipe
+    }
+    return render(request, 'recipe.html', data)
