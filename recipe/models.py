@@ -10,5 +10,6 @@ class Recipe(models.Model):
     prepare_time = models.IntegerField()
     serves = models.CharField(max_length=100)
     category = models.CharField(max_length=100)
+    image = models.ImageField(upload_to='photo/%d/%m/%Y/', blank=True)
     created_at = models.DateTimeField(default=datetime.now, blank=True)
     published = models.BooleanField(default=False)
