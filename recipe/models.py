@@ -11,3 +11,4 @@ class Recipe(models.Model):
     serves = models.CharField(max_length=100)
     category = models.CharField(max_length=100)
     created_at = models.DateTimeField(default=datetime.now, blank=True)
+    published = models.BooleanField(default=False)
