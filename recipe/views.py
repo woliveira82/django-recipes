@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from .models import Recipe
 
 def index(request):
-    recipe_list = Recipe.objects.filter(published=True)
+    recipe_list = Recipe.objects.order_by('-created_at').filter(published=True)
     data = {
         'recipe_list': recipe_list
     }
