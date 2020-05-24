@@ -1,7 +1,9 @@
 from django.db import models
 from datetime import datetime
+from people.models import Person
 
 class Recipe(models.Model):
+    person = models.ForeignKey(Person, on_delete=models.CASCADE)
     name = models.CharField(max_length=200)
     ingredients = models.TextField()
     instructions = models.TextField()
